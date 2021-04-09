@@ -6,7 +6,7 @@
   <link href="https://chengling0824.github.io/atom.xml" rel="self"/>
   
   <link href="https://chengling0824.github.io/"/>
-  <updated>2021-04-01T06:59:22.437Z</updated>
+  <updated>2021-04-09T01:10:53.148Z</updated>
   <id>https://chengling0824.github.io/</id>
   
   <author>
@@ -17,19 +17,16 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo样式调整记录</title>
+    <title>设置hexo首页只显示部分摘要（不显示全文）</title>
     <link href="https://chengling0824.github.io/2021/04/01/hexo%E6%A0%B7%E5%BC%8F%E8%B0%83%E6%95%B4%E8%AE%B0%E5%BD%95/"/>
     <id>https://chengling0824.github.io/2021/04/01/hexo%E6%A0%B7%E5%BC%8F%E8%B0%83%E6%95%B4%E8%AE%B0%E5%BD%95/</id>
     <published>2021-04-01T06:51:24.000Z</published>
-    <updated>2021-04-01T06:59:22.437Z</updated>
+    <updated>2021-04-09T01:10:53.148Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h1><h2 id="设置hexo首页只显示部分摘要（不显示全文）"><a href="#设置hexo首页只显示部分摘要（不显示全文）" class="headerlink" title="设置hexo首页只显示部分摘要（不显示全文）"></a>设置hexo首页只显示部分摘要（不显示全文）</h2><p>一、修改配置</p><p>首先需要在Next主题的_config.yml中把设置打开：(默认安装时就打开了)</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><p>二、</p><ol><li></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>首先，修改配置</p><p>首先需要在Next主题的_config.yml中把设置打开：(默认安装时就打开了)</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><span id="more"></span><p>然后，有两种方法：</p><p>方法一：写概述</p><p>在文章的<code>front-matter</code>中添加<code>description</code>，其中description中的内容就会被显示在首页上，其余一律不显示。</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 让首页显示部分内容</span><br><span class="line">date: 2020-02-23 22:55:10</span><br><span class="line">description: 这是显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>方法二：文章截断</p><p>在需要截断的地方加入：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure><p>首页就会显示这条以上的所有内容，隐藏接下来的所有内容。<br>例如本文会显示到<code>修改配置</code>上面。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h1 id=&quot;首页&quot;&gt;&lt;a href=&quot;#首页&quot; class=&quot;headerlink&quot; title=&quot;首页&quot;&gt;&lt;/a&gt;首页&lt;/h1&gt;&lt;h2 id=&quot;设置hexo首页只显示部分摘要（不显示全文）&quot;&gt;&lt;a href=&quot;#设置hexo首页只显示部分摘要（不显示全文）&quot; class=&quot;</summary>
-      
+    <summary type="html">一、修改配置 首先需要在Next主题的_config.yml中把设置打开：(默认安装时就打开了)  然后，有两种方法：方法一：写概述 在文章的`front-matter`中添加`description`，其中description中的内容就会被显示在首页上，其余一律不显示。</summary>
     
     
     
