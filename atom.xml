@@ -6,7 +6,7 @@
   <link href="https://chengling0824.github.io/atom.xml" rel="self"/>
   
   <link href="https://chengling0824.github.io/"/>
-  <updated>2021-04-09T01:10:53.148Z</updated>
+  <updated>2021-04-09T01:40:54.066Z</updated>
   <id>https://chengling0824.github.io/</id>
   
   <author>
@@ -17,20 +17,77 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>git基本操作</title>
+    <link href="https://chengling0824.github.io/2021/04/01/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>https://chengling0824.github.io/2021/04/01/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
+    <published>2021-04-01T06:51:24.000Z</published>
+    <updated>2021-04-09T01:40:54.066Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git基本操作"><a href="#git基本操作" class="headerlink" title="git基本操作"></a>git基本操作</h1><h2 id="git的基本操作逻辑"><a href="#git的基本操作逻辑" class="headerlink" title="git的基本操作逻辑"></a>git的基本操作逻辑</h2><p><img src="https://pic4.zhimg.com/80/v2-aab55876b59f599900388a43db9ec69f_720w.jpg"></p><h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><ol><li>克隆版本库 git clone</li><li>获取更新，查看其他人的进程 git feach</li><li>取回更新，与本地合并 git pull</li><li>推送本地代码到远程主机 git push</li></ol>]]></content>
+    
+    
+    <summary type="html">git的基本操作逻辑 常用指令：1. 克隆版本库 git clone 2. 获取更新，查看其他人的进程 git feach 3. 取回更新，与本地合并 git pull 4. 推送本地代码到远程主机 git push</summary>
+    
+    
+    
+    
+    <category term="git" scheme="https://chengling0824.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>设置hexo首页只显示部分摘要（不显示全文）</title>
     <link href="https://chengling0824.github.io/2021/04/01/hexo%E6%A0%B7%E5%BC%8F%E8%B0%83%E6%95%B4%E8%AE%B0%E5%BD%95/"/>
     <id>https://chengling0824.github.io/2021/04/01/hexo%E6%A0%B7%E5%BC%8F%E8%B0%83%E6%95%B4%E8%AE%B0%E5%BD%95/</id>
     <published>2021-04-01T06:51:24.000Z</published>
-    <updated>2021-04-09T01:10:53.148Z</updated>
+    <updated>2021-04-09T01:25:01.523Z</updated>
     
     <content type="html"><![CDATA[<p>首先，修改配置</p><p>首先需要在Next主题的_config.yml中把设置打开：(默认安装时就打开了)</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><span id="more"></span><p>然后，有两种方法：</p><p>方法一：写概述</p><p>在文章的<code>front-matter</code>中添加<code>description</code>，其中description中的内容就会被显示在首页上，其余一律不显示。</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 让首页显示部分内容</span><br><span class="line">date: 2020-02-23 22:55:10</span><br><span class="line">description: 这是显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>方法二：文章截断</p><p>在需要截断的地方加入：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure><p>首页就会显示这条以上的所有内容，隐藏接下来的所有内容。<br>例如本文会显示到<code>修改配置</code>上面。</p>]]></content>
     
     
-    <summary type="html">一、修改配置 首先需要在Next主题的_config.yml中把设置打开：(默认安装时就打开了)  然后，有两种方法：方法一：写概述 在文章的`front-matter`中添加`description`，其中description中的内容就会被显示在首页上，其余一律不显示。</summary>
+    <summary type="html">首先，需要先修改配置 首先需要在Next主题的_config.yml中把设置打开：(默认安装时就打开了)  然后，有两种方法：方法一：写概述 在文章的`front-matter`中添加`description`，其中description中的内容就会被显示在首页上，其余一律不显示。</summary>
     
     
     
     <category term="hexo—theme-next" scheme="https://chengling0824.github.io/categories/hexo%E2%80%94theme-next/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Angular,React,Vue三大框架的比较</title>
+    <link href="https://chengling0824.github.io/2021/04/01/%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6%E7%9A%84%E6%AF%94%E8%BE%83/"/>
+    <id>https://chengling0824.github.io/2021/04/01/%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6%E7%9A%84%E6%AF%94%E8%BE%83/</id>
+    <published>2021-04-01T06:51:24.000Z</published>
+    <updated>2021-04-09T01:44:22.892Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Angular-React-Vue三大框架的比较"><a href="#Angular-React-Vue三大框架的比较" class="headerlink" title="Angular,React,Vue三大框架的比较"></a>Angular,React,Vue三大框架的比较</h1><h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>Angular是基于 TypeScript 的 Javascript 框架。</p><p>它是三大框架里最早针对页面性能问题提出的优化探索，并在2010年由Google对外发布，react、vue后面相继出现。然而Angular由于最早开始，那时候移动端还没有兴起，一开始定位的Web端有些不适应后来的移动端趋势，导致后面有个大的版本迭代。Angular团队在保持<strong>性能优化</strong>的核心方案的同时，适应<strong>移动端化、组件化</strong>的大热潮流，2016年推出了Angular2。并且官方团队在2018年将AngularJS宣布将进行LTS长期维护时间，以后将不再提供支持和更新。虽然目前很多团队的应用还是基于AngularJS，官方也建议尽快迁移。</p><p>React被描述为 “用于构建用户界面的 JavaScript 库”。</p><p>由Facebook在2013年正式对外发布，并一直由Facebook团队负责维护和推广。在 Chris Cordle 这篇文章的统计中，React 在 Facebook 上的使用远远多于 Angular 在 Google 上的使用。React 还被 Airbnb，Uber，Netflix，Twitter，Pinterest，Reddit，Udemy，Wix，Paypal，Imgur，Feedly，Stripe，Tumblr，Walmart 等使用（根据 Facebook, stackshare 和 libscore.com 提供的数据）。</p><p>Vue是近年国内发展最为迅速的 JS 框架。<br><img src="https://user-gold-cdn.xitu.io/2019/6/30/16ba79460127cd31?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><br>这里可以看出，在国内，Vue的新潮不是空穴来风，它的热搜量还是稳居第一并继续持续提升的趋势。React, Angular都相对平缓。</p><p>但在国外，react仍占大头，Google趋势如下 :<br><img src="https://user-gold-cdn.xitu.io/2019/6/30/16ba78948101c826?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p><h2 id="Vue与AngularJS的区别"><a href="#Vue与AngularJS的区别" class="headerlink" title="Vue与AngularJS的区别"></a>Vue与AngularJS的区别</h2><p>相同点： 都支持指令：内置指令和自定义指令；都支持过滤器：内置过滤器和自定义过滤器；都支持双向数据绑定；都不支持低端浏览器。<br>不同点：AngularJS的学习成本高，比如增加了Dependency Injection特性，而Vue.js本身提供的API都比较简单、直观；在性能上，AngularJS依赖对数据做脏检查，所以Watcher越多越慢；Vue.js使用基于依赖追踪的观察并且使用异步队列更新，所有的数据都是独立触发的。</p><h2 id="Vue与React的区别"><a href="#Vue与React的区别" class="headerlink" title="Vue与React的区别"></a>Vue与React的区别</h2><p>相同点：React采用特殊的JSX语法，Vue.js在组件开发中也推崇编写.vue特殊文件格式，对文件内容都有一些约定，两者都需要编译后使用；中心思想相同：一切都是组件，组件实例之间可以嵌套；都提供合理的钩子函数，可以让开发者定制化地去处理需求；都不内置列数AJAX，Route等功能到核心包，而是以插件的方式加载；在组件开发中都支持mixins的特性。<br>不同点：React采用的Virtual DOM会对渲染出来的结果做脏检查；Vue.js在模板中提供了指令，过滤器等，可以非常方便，快捷地操作Virtual DOM。</p><h2 id="一点预测"><a href="#一点预测" class="headerlink" title="一点预测"></a>一点预测</h2><ol><li><p>从市场份额来看，React目前依旧占大额，但以后说不好，毕竟有个BSD license的问题争论。（很多公司和个人都已经迁移，因为目前Facebook旗下很多开源项目还都是BSD, 不确定哪天Facebook又把React切换回BSD。） Angular的趋势平缓，且有Google团队的支持，应该以后依旧会保持着现有的状态。Vue新贵虽然目前市场份额不大，但是发展趋势很迅猛，且跟多家大平台合作，在国内的资讯、媒体、社区都很活跃，所以发展前景还是可观的。</p></li><li><p>从社区支持来看，前面已经说过，Facebook支持着React，而Google支持着Angular，因此这两种框架的增长是毋庸置疑的。它们能够持续得到更新与发布，在碰到迁移时也有着很好的维护与支持。<br>React和Angular的开发人员都声称：升级不是问题，他们会每六个月发布一次主要更新。另外，由于Angular是一个完备的框架，而React是一组更独立、更快捷、且不断改进的库，因此React比Angular更灵活。不过，您也必须关注那些可能不再被支持或维护的小模块。而Vue这方面更缺失，没有一个明确的长远版本规划的路线图。</p></li><li><p>从框架、库角度来说，Angular是一个完备的框架，您不必查看各种库、路由方案和其具体结构，就能快速地开始构建。虽然Angualr4系列之后也在逐步减重，但不得不说，相比较React和Vue相对来说，还是厚重一些。React可以集成很多库来无缝连接搭建应用，但也因此导致React出错率和依赖性都偏高一些。Vue则是平衡了内部依赖和灵活性这块儿，所以相对来说轻而方便使用。</p></li><li><p>从学习曲线来看，Angular和React都有自己的一套，尤其Angular还有依赖注入的层次结构概念，很多都自己集成了，学习成本偏高。从这点来说，Vue的门槛真的很低。难怪现在很多公司偏向Vue, 人力成本低。</p></li></ol><p>随着微应用和微服务的兴起，React和Vue的灵活性更适合开发。Angular更偏单页应用。但Angular是最早拥抱typescript的(在npm2018年的调研中，编译js方法里以46%的占比一跃成为第二，紧跟Babel之后)，也是最早将RxJS思想贯彻到底的框架。</p>]]></content>
+    
+    
+    <summary type="html">背景介绍：Angular是基于 TypeScript 的 Javascript 框架。它是三大框架里最早针对页面性能问题提出的优化探索，并在2010年由Google对外发布，react、vue后面相继出现。然而Angular由于最早开始，那时候移动端还没有兴起，一开始定位的Web端有些不适应后来的移动端趋势，导致后面有个大的版本迭代。Angular团队在保持**性能优化**的核心方案的同时，适应**移动端化、组件化**的大热潮流</summary>
+    
+    
+    
+    
+    <category term="前端框架" scheme="https://chengling0824.github.io/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css浮动</title>
+    <link href="https://chengling0824.github.io/2021/04/01/%E6%B5%AE%E5%8A%A8/"/>
+    <id>https://chengling0824.github.io/2021/04/01/%E6%B5%AE%E5%8A%A8/</id>
+    <published>2021-04-01T06:51:24.000Z</published>
+    <updated>2021-04-09T01:43:03.003Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>浮动的定义：使元素脱离文档流，按照指定方向（左右）发生移动，遇到父级边界或者相邻的浮动元素停了下来。</p></blockquote><h1 id="浮动中将会遇到的问题"><a href="#浮动中将会遇到的问题" class="headerlink" title="浮动中将会遇到的问题"></a>浮动中将会遇到的问题</h1><h2 id="第一种情况-导致的各种布局混乱问题"><a href="#第一种情况-导致的各种布局混乱问题" class="headerlink" title="第一种情况 导致的各种布局混乱问题"></a>第一种情况 导致的各种布局混乱问题</h2><blockquote><p>（浮动元素不占位置导致的布局变化）</p></blockquote><h2 id="第二种情况-浮动的元素只影响他后面的元素-根据层叠顺序推算"><a href="#第二种情况-浮动的元素只影响他后面的元素-根据层叠顺序推算" class="headerlink" title="第二种情况 浮动的元素只影响他后面的元素    根据层叠顺序推算"></a>第二种情况 浮动的元素只影响他后面的元素    根据层叠顺序推算</h2><h2 id="第三种情况-导致的各种掉盒子问题"><a href="#第三种情况-导致的各种掉盒子问题" class="headerlink" title="第三种情况 导致的各种掉盒子问题"></a>第三种情况 导致的各种掉盒子问题</h2><p>如果父级宽度太窄，无法容纳所有元素，无法容纳的元素会掉下去，之后还是会执行浮动，向左/右直到遇到边框就会停下来！</p><h2 id="第四种情况-导致的各种被卡住问题"><a href="#第四种情况-导致的各种被卡住问题" class="headerlink" title="第四种情况 导致的各种被卡住问题"></a>第四种情况 导致的各种被卡住问题</h2><blockquote><p>浮动的元素高度不同，并且外面盒子宽度不够的情况下，往下掉的过程中可能会被卡住（掉出来后盒子仍向左/右执行浮动）</p></blockquote><h1 id="float元素的特性"><a href="#float元素的特性" class="headerlink" title="float元素的特性"></a>float元素的特性</h1><ul><li><p>设置了浮动的元素，变成浮动元素，具备浮动元素特性</p></li><li><p>都支持横排显示 </p></li><li><p>都支持宽高  </p></li><li><p>不给宽度的时候默认内容撑开宽高  </p></li><li><p>支持margin padding  </p></li><li><p>不支持margin:auto;  </p></li><li><p>浮动脱离文档流  </p></li><li><p>浮动提升层级半级 概念性理解，其实和层级没关系，只有定位有层级</p></li></ul><h1 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h1><h2 id="为什么要清除浮动"><a href="#为什么要清除浮动" class="headerlink" title="为什么要清除浮动"></a>为什么要清除浮动</h2><blockquote><p>浮动元素不占位置，由于不占位置导致父级的塌陷影响布局 （内容为0高度，父级高度由内容撑开的时候，也为0）</p></blockquote><h2 id="清除浮动的原则（清除浮动乃是清除浮动给父级带来的影响）"><a href="#清除浮动的原则（清除浮动乃是清除浮动给父级带来的影响）" class="headerlink" title="清除浮动的原则（清除浮动乃是清除浮动给父级带来的影响）"></a>清除浮动的原则（清除浮动乃是清除浮动给父级带来的影响）</h2><p>1.浮动元素本身不能清除浮动 比如div 设置了float 不能直接给div 运用clear来清除浮动   </p><p>2.哪里浮动，哪里给父元素清除！即浮动之后要立马解决这里由于浮动带来的影响！ 以免对后面的布局造成影响！</p><h2 id="清除浮动的方式"><a href="#清除浮动的方式" class="headerlink" title="清除浮动的方式"></a>清除浮动的方式</h2><h3 id="子元素方式：添加空标签"><a href="#子元素方式：添加空标签" class="headerlink" title="子元素方式：添加空标签"></a>子元素方式：添加空标签</h3><blockquote><p>在需要清除浮动的元素前面添加一个空的div</p><p>浮动元素本身不能清除浮动</p></blockquote><p><code>&lt;div style=&#39;clear:both;&#39;&gt;&lt;/div&gt;</code></p><h3 id="给父级用的方法"><a href="#给父级用的方法" class="headerlink" title="给父级用的方法"></a>给父级用的方法</h3><ol><li><p>给父元素添加高度  缺点是扩展性不好，一般都是内容撑开高度  </p></li><li><p>给父级inline­block  缺点是中间会解析空格   </p></li><li><p>overflow:hidden;  需要溢出隐藏的时候你就写，这样就不用写清楚浮动的样了   </p></li></ol><blockquote><p>在父元素上设置overflow这个属性，如果父元素的这个属性设置为auto或者是hidden，父元素就会扩展包含浮动</p></blockquote><ol start="4"><li>after伪类</li></ol><blockquote><p>利用伪类元素来清除有浮动的标签，也就定义一个公共的类clearfix，给这个类添加css属性，在里面进行清除浮动的操作。只要哪里需要清除浮动，就在哪里添加一个清除浮动的类</p></blockquote><blockquote><p>这种方式这样理解，就是利用伪类元素，也就是在有浮动的标签前面添加一个块级元素，来达到效果。</p><p><code>.clearfix:after&#123;content:&#39;&#39;;display:block;clear:both;&#125; </code></p></blockquote><blockquote><p>解决低版本ie的兼容性问题 :</p><p><code>.clearfix&#123;zoom：1；&#125; </code></p></blockquote>]]></content>
+    
+    
+    <summary type="html">浮动的定义：使元素脱离文档流，按照指定方向（左右）发生移动，遇到父级边界或者相邻的浮动元素停了下来。 浮动中将会遇到的问题：第一种情况 导致的各种布局混乱问题  （浮动元素不占位置导致的布局变化）第二种情况 浮动的元素只影响他后面的元素   根据层叠顺序推算  第三种情况 导致的各种掉盒子问题...</summary>
+    
+    
+    
+    <category term="css" scheme="https://chengling0824.github.io/categories/css/"/>
     
     
   </entry>
@@ -88,6 +145,47 @@
     <summary type="html">标题： 标题通过 `#` 的个数来进行区分，Mardown总共支持6级标题。  字体设置：粗体：字符串前后均加上 `**`  斜体：字符串前后均加上 `*`   删除线：字符串前后各加 `~~`   标记：字体前后加上 ` (Esc下方的那个键)</summary>
     
     
+    
+    
+  </entry>
+  
+  <entry>
+    <title>this的指向问题</title>
+    <link href="https://chengling0824.github.io/2021/03/24/this%E7%9A%84%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/"/>
+    <id>https://chengling0824.github.io/2021/03/24/this%E7%9A%84%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/</id>
+    <published>2021-03-24T04:08:02.000Z</published>
+    <updated>2021-04-09T01:45:30.139Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="this的指向问题"><a href="#this的指向问题" class="headerlink" title="this的指向问题"></a>this的指向问题</h1><blockquote><p>this是一个对象，但是我们不同的操作 this指向的对象是不相同的。</p></blockquote><h2 id="三种-this指向情况："><a href="#三种-this指向情况：" class="headerlink" title="三种 this指向情况："></a>三种 this指向情况：</h2><ol><li><p>对象调用，this 指向该对象（前边谁调用 this 就指向谁）</p></li><li><p>直接调用的函数，this 指向的是全局 window 对象</p></li><li><p>通过 new 的方式，this 永远被绑定在新创建的对象上，任何方式都改变不了 this 的指向</p></li></ol><blockquote><p>new的过程，其实在内部创建了一个空对象，然后将构造函数传入的参数和属性挂在了这个空对象上，然后返回了这个对象。</p></blockquote><h2 id="扩展：箭头函数的-this-指向谁？"><a href="#扩展：箭头函数的-this-指向谁？" class="headerlink" title="扩展：箭头函数的 this 指向谁？"></a>扩展：箭头函数的 this 指向谁？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const obj &#x3D;&#123;</span><br><span class="line">    a:()&#x3D;&gt;&#123;</span><br><span class="line">        console.log(this)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>运行程序，控制台输出：</p></blockquote><p><img src="https://user-gold-cdn.xitu.io/2019/11/14/16e6758e10fbf72e?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p><blockquote><p>我们可以得出结论，this在箭头函数中失效了，因为这是由于箭头函数没有单独的 this值。</p><p>箭头函数的 this与声明所在的上下文相同。</p><p>也就是说调用箭头函数的时候，不会隐式的调用 this参数，而是从定义时的函数继承上下文。</p></blockquote><h1 id="如何改变-this-的值？"><a href="#如何改变-this-的值？" class="headerlink" title="如何改变 this 的值？"></a>如何改变 this 的值？</h1><ol><li><p>call 方法</p></li><li><p>apply 方法</p></li><li><p>bind 方法</p></li></ol>]]></content>
+    
+    
+    <summary type="html">this是一个对象，但是我们不同的操作 this指向的对象是不相同的。 三种 this指向情况： 1. 对象调用，this 指向该对象（前边谁调用 this 就指向谁） 2. 直接调用的函数，this 指向的是全局 window 对象 3. 通过 new 的方式，this 永远被绑定在新创建的对象上，任何方式都改变不了 this 的指向...</summary>
+    
+    
+    
+    <category term="javascript" scheme="https://chengling0824.github.io/categories/javascript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue路由的实现与钩子函数</title>
+    <link href="https://chengling0824.github.io/2021/03/24/vue%E7%9A%84%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://chengling0824.github.io/2021/03/24/vue%E7%9A%84%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0/</id>
+    <published>2021-03-24T04:08:02.000Z</published>
+    <updated>2021-04-09T01:37:36.852Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Vue的路由实现：hash模式-和-history模式"><a href="#Vue的路由实现：hash模式-和-history模式" class="headerlink" title="Vue的路由实现：hash模式 和 history模式"></a>Vue的路由实现：hash模式 和 history模式</h1><p>通常 SPA 中前端路由有2种实现方式：</p><blockquote><p>window.history<br>location.hash</p></blockquote><p>下面就来介绍下这两种方式具体怎么实现的</p><h2 id="一-history"><a href="#一-history" class="headerlink" title="一. history"></a>一. history</h2><h3 id="1-history基本介绍"><a href="#1-history基本介绍" class="headerlink" title="1.history基本介绍"></a>1.history基本介绍</h3><blockquote><p> window.history 对象包含浏览器的历史，window.history 对象在编写时可不使用 window 这个前缀。history是实现SPA前端路由是一种主流方法，它有几个原始方法：</p><p>history.back() - 与在浏览器点击后退按钮相同<br>history.forward() - 与在浏览器中点击按钮向前相同<br>history.go(n) - 接受一个整数作为参数，移动到该整数指定的页面，比如go(1)相当于forward()，go(-1)相当于back()，go(0)相当于刷新当前页面<br>如果移动的位置超出了访问历史的边界，以上三个方法并不报错，而是静默失败</p></blockquote><p>history采用HTML5的新特性；且提供了两个新方法：pushState（），replaceState（）可以对浏览器历史记录栈进行修改，以及popState事件的监听到状态变更。<br>history 模式下，前端的 URL 必须和实际向后端发起请求的 URL 一致，如 <a href="http://www.xxx.com/items/id%E3%80%82">www.xxx.com/items/id。</a> 后端如果缺少对 /items/id 的路由处理，将返回 404 错误。Vue-Router 官网里如此描述：“不过这种模式要玩好，还需要后台配置支持……所以呢，你要在服务端增加一个覆盖所有情况的候选资源：如果 URL 匹配不到任何静态资源，则应该返回同一个 index.html 页面，这个页面就是你 app 依赖的页面。”</p><h3 id="2-history-pushState"><a href="#2-history-pushState" class="headerlink" title="2.history.pushState"></a>2.history.pushState</h3><p>pushState(stateObj, title, url) 方法向历史栈中写入数据，其第一个参数是要写入的数据对象（不大于640kB)，第二个参数是页面的 title, 第三个参数是 url (相对路径)。</p><p>stateObj ：一个与指定网址相关的状态对象，popstate事件触发时，该对象会传入回调函数。如果不需要这个对象，此处可以填null。</p><p>title：新页面的标题，但是所有浏览器目前都忽略这个值，因此这里可以填null。</p><p>url：新的网址，必须与当前页面处在同一个域。浏览器的地址栏将显示这个网址。</p><p>关于pushState，有几个值得注意的地方：</p><p>pushState方法不会触发页面刷新，只是导致history对象发生变化，地址栏会有反应,只有当触发前进后退等事件（back()和forward()等）时浏览器才会刷新</p><p>这里的 url 是受到同源策略限制的，防止恶意脚本模仿其他网站 url 用来欺骗用户，所以当违背同源策略时将会报错</p><h3 id="3-history-replaceState"><a href="#3-history-replaceState" class="headerlink" title="3.history.replaceState"></a>3.history.replaceState</h3><p>replaceState(stateObj, title, url) 和pushState的区别就在于它不是写入而是替换修改浏览历史中当前纪录，其余和 pushState一模一样</p><h3 id="4-popstate事件"><a href="#4-popstate事件" class="headerlink" title="4.popstate事件"></a>4.popstate事件</h3><p>定义：每当同一个文档的浏览历史（即history对象）出现变化时，就会触发popstate事件。</p><p>注意：仅仅调用pushState方法或replaceState方法 ，并不会触发该事件，只有用户点击浏览器倒退按钮和前进按钮，或者使用JavaScript调用back、forward、go方法时才会触发。另外，该事件只针对同一个文档，如果浏览历史的切换，导致加载不同的文档，该事件也不会触发。</p><p>用法：使用的时候，可以为popstate事件指定回调函数。这个回调函数的参数是一个event事件对象，它的state属性指向pushState和replaceState方法为当前URL所提供的状态对象（即这两个方法的第一个参数）。</p><h3 id="5-history实现spa前端路由代码"><a href="#5-history实现spa前端路由代码" class="headerlink" title="5.history实现spa前端路由代码"></a>5.history实现spa前端路由代码</h3><p><a class="api a">a.html</a><br><a class="api b">b.html</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 注册路由</span><br><span class="line">   document.querySelectorAll(&#39;.api&#39;).forEach(item &#x3D;&gt; &#123;</span><br><span class="line">     item.addEventListener(&#39;click&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">       e.preventDefault();</span><br><span class="line">       let link &#x3D; item.textContent;</span><br><span class="line">       if (!!(window.history &amp;&amp; history.pushState)) &#123;</span><br><span class="line">         &#x2F;&#x2F; 支持History API</span><br><span class="line">         window.history.pushState(&#123;name: &#39;api&#39;&#125;, link, link);</span><br><span class="line">       &#125; else &#123;</span><br><span class="line">         &#x2F;&#x2F; 不支持,可使用一些Polyfill库来实现</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;, false)</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure><pre><code>// 监听路由window.addEventListener(&#39;popstate&#39;, e =&gt; &#123;  console.log(&#123;    location: location.href,    state: e.state  &#125;)&#125;, false)</code></pre><p>复制代码<br>popstate监听函数里打印的e.state便是history.pushState()里传入的第一个参数，在这里即为{name: ‘api’}</p><h2 id="二-Hash"><a href="#二-Hash" class="headerlink" title="二. Hash"></a>二. Hash</h2><h3 id="1-Hash基本介绍"><a href="#1-Hash基本介绍" class="headerlink" title="1.Hash基本介绍"></a>1.Hash基本介绍</h3><blockquote><p>在浏览器中符号“#”，#以及#后面的字符称之为hash，用window.location.hash读取；<br>特点：hash虽然在URL中，但不被包括在HTTP请求中；用来指导浏览器动作，对服务端安全无用，hash不会重加载页面。<br>hash 模式下，仅 hash 符号之前的内容会被包含在请求中，如 <a href="http://www.xxx.com,因此对于后端来说,即使没有做到对路由的全覆盖,也不会返回/">www.xxx.com，因此对于后端来说，即使没有做到对路由的全覆盖，也不会返回</a> 404 错误。</p></blockquote><p>window 对象中有一个事件是 onhashchange，以下几种情况都会触发这个事件：</p><p>直接更改浏览器地址，在最后面增加或改变#hash；<br>通过改变location.href或location.hash的值；<br>通过触发点击带锚点的链接；<br>浏览器前进后退可能导致hash的变化，前提是两个网页地址中的hash值不同。</p><h3 id="2-Hash实现spa前端路由代码"><a href="#2-Hash实现spa前端路由代码" class="headerlink" title="2.Hash实现spa前端路由代码"></a>2.Hash实现spa前端路由代码</h3><h1 id="vue路由的钩子函数"><a href="#vue路由的钩子函数" class="headerlink" title="vue路由的钩子函数"></a>vue路由的钩子函数</h1><p>首页可以控制导航跳转，beforeEach，afterEach等，一般用于页面title的修改。一些需要登录才能调整页面的重定向功能。</p><ul><li>beforeEach主要有3个参数to，from，next：</li><li>to：route即将进入的目标路由对象，</li><li>from：route当前导航正要离开的路由</li><li>next：function一定要调用该方法resolve这个钩子。执行效果依赖next方法的调用参数。可以控制网页的跳转。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Vue的路由实现：hash模式-和-history模式&quot;&gt;&lt;a href=&quot;#Vue的路由实现：hash模式-和-history模式&quot; class=&quot;headerlink&quot; title=&quot;Vue的路由实现：hash模式 和 history模式&quot;&gt;&lt;/a&gt;Vue的路</summary>
+      
+    
+    
+    
+    <category term="vue" scheme="https://chengling0824.github.io/categories/vue/"/>
     
     
   </entry>
