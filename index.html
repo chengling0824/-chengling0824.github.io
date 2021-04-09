@@ -214,10 +214,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-01 14:45:52 / 修改时间：14:49:52" itemprop="dateCreated datePublished" datetime="2021-04-01T14:45:52+08:00">2021-04-01</time>
+              <time title="创建时间：2021-04-01 14:45:52" itemprop="dateCreated datePublished" datetime="2021-04-01T14:45:52+08:00">2021-04-01</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-09 09:51:36" itemprop="dateModified" datetime="2021-04-09T09:51:36+08:00">2021-04-09</time>
+              </span>
 
           
 
@@ -822,7 +828,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-09 09:37:36" itemprop="dateModified" datetime="2021-04-09T09:37:36+08:00">2021-04-09</time>
+                <time title="修改时间：2021-04-09 09:52:28" itemprop="dateModified" datetime="2021-04-09T09:52:28+08:00">2021-04-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -845,52 +851,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Vue的路由实现：hash模式-和-history模式"><a href="#Vue的路由实现：hash模式-和-history模式" class="headerlink" title="Vue的路由实现：hash模式 和 history模式"></a>Vue的路由实现：hash模式 和 history模式</h1><p>通常 SPA 中前端路由有2种实现方式：</p>
-<blockquote>
-<p>window.history<br>location.hash</p>
-</blockquote>
-<p>下面就来介绍下这两种方式具体怎么实现的</p>
-<h2 id="一-history"><a href="#一-history" class="headerlink" title="一. history"></a>一. history</h2><h3 id="1-history基本介绍"><a href="#1-history基本介绍" class="headerlink" title="1.history基本介绍"></a>1.history基本介绍</h3><blockquote>
-<p> window.history 对象包含浏览器的历史，window.history 对象在编写时可不使用 window 这个前缀。history是实现SPA前端路由是一种主流方法，它有几个原始方法：</p>
-<p>history.back() - 与在浏览器点击后退按钮相同<br>history.forward() - 与在浏览器中点击按钮向前相同<br>history.go(n) - 接受一个整数作为参数，移动到该整数指定的页面，比如go(1)相当于forward()，go(-1)相当于back()，go(0)相当于刷新当前页面<br>如果移动的位置超出了访问历史的边界，以上三个方法并不报错，而是静默失败</p>
-</blockquote>
-<p>history采用HTML5的新特性；且提供了两个新方法：pushState（），replaceState（）可以对浏览器历史记录栈进行修改，以及popState事件的监听到状态变更。<br>history 模式下，前端的 URL 必须和实际向后端发起请求的 URL 一致，如 <a target="_blank" rel="noopener" href="http://www.xxx.com/items/id%E3%80%82">www.xxx.com/items/id。</a> 后端如果缺少对 /items/id 的路由处理，将返回 404 错误。Vue-Router 官网里如此描述：“不过这种模式要玩好，还需要后台配置支持……所以呢，你要在服务端增加一个覆盖所有情况的候选资源：如果 URL 匹配不到任何静态资源，则应该返回同一个 index.html 页面，这个页面就是你 app 依赖的页面。”</p>
-<h3 id="2-history-pushState"><a href="#2-history-pushState" class="headerlink" title="2.history.pushState"></a>2.history.pushState</h3><p>pushState(stateObj, title, url) 方法向历史栈中写入数据，其第一个参数是要写入的数据对象（不大于640kB)，第二个参数是页面的 title, 第三个参数是 url (相对路径)。</p>
-<p>stateObj ：一个与指定网址相关的状态对象，popstate事件触发时，该对象会传入回调函数。如果不需要这个对象，此处可以填null。</p>
-<p>title：新页面的标题，但是所有浏览器目前都忽略这个值，因此这里可以填null。</p>
-<p>url：新的网址，必须与当前页面处在同一个域。浏览器的地址栏将显示这个网址。</p>
-<p>关于pushState，有几个值得注意的地方：</p>
-<p>pushState方法不会触发页面刷新，只是导致history对象发生变化，地址栏会有反应,只有当触发前进后退等事件（back()和forward()等）时浏览器才会刷新</p>
-<p>这里的 url 是受到同源策略限制的，防止恶意脚本模仿其他网站 url 用来欺骗用户，所以当违背同源策略时将会报错</p>
-<h3 id="3-history-replaceState"><a href="#3-history-replaceState" class="headerlink" title="3.history.replaceState"></a>3.history.replaceState</h3><p>replaceState(stateObj, title, url) 和pushState的区别就在于它不是写入而是替换修改浏览历史中当前纪录，其余和 pushState一模一样</p>
-<h3 id="4-popstate事件"><a href="#4-popstate事件" class="headerlink" title="4.popstate事件"></a>4.popstate事件</h3><p>定义：每当同一个文档的浏览历史（即history对象）出现变化时，就会触发popstate事件。</p>
-<p>注意：仅仅调用pushState方法或replaceState方法 ，并不会触发该事件，只有用户点击浏览器倒退按钮和前进按钮，或者使用JavaScript调用back、forward、go方法时才会触发。另外，该事件只针对同一个文档，如果浏览历史的切换，导致加载不同的文档，该事件也不会触发。</p>
-<p>用法：使用的时候，可以为popstate事件指定回调函数。这个回调函数的参数是一个event事件对象，它的state属性指向pushState和replaceState方法为当前URL所提供的状态对象（即这两个方法的第一个参数）。</p>
-<h3 id="5-history实现spa前端路由代码"><a href="#5-history实现spa前端路由代码" class="headerlink" title="5.history实现spa前端路由代码"></a>5.history实现spa前端路由代码</h3><p><a class="api a">a.html</a><br><a class="api b">b.html</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 注册路由</span><br><span class="line">   document.querySelectorAll(&#39;.api&#39;).forEach(item &#x3D;&gt; &#123;</span><br><span class="line">     item.addEventListener(&#39;click&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">       e.preventDefault();</span><br><span class="line">       let link &#x3D; item.textContent;</span><br><span class="line">       if (!!(window.history &amp;&amp; history.pushState)) &#123;</span><br><span class="line">         &#x2F;&#x2F; 支持History API</span><br><span class="line">         window.history.pushState(&#123;name: &#39;api&#39;&#125;, link, link);</span><br><span class="line">       &#125; else &#123;</span><br><span class="line">         &#x2F;&#x2F; 不支持,可使用一些Polyfill库来实现</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;, false)</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
-
-<pre><code>// 监听路由
-window.addEventListener(&#39;popstate&#39;, e =&gt; &#123;
-  console.log(&#123;
-    location: location.href,
-    state: e.state
-  &#125;)
-&#125;, false)
-</code></pre>
-<p>复制代码<br>popstate监听函数里打印的e.state便是history.pushState()里传入的第一个参数，在这里即为{name: ‘api’}</p>
-<h2 id="二-Hash"><a href="#二-Hash" class="headerlink" title="二. Hash"></a>二. Hash</h2><h3 id="1-Hash基本介绍"><a href="#1-Hash基本介绍" class="headerlink" title="1.Hash基本介绍"></a>1.Hash基本介绍</h3><blockquote>
-<p>在浏览器中符号“#”，#以及#后面的字符称之为hash，用window.location.hash读取；<br>特点：hash虽然在URL中，但不被包括在HTTP请求中；用来指导浏览器动作，对服务端安全无用，hash不会重加载页面。<br>hash 模式下，仅 hash 符号之前的内容会被包含在请求中，如 <a target="_blank" rel="noopener" href="http://www.xxx.com,因此对于后端来说,即使没有做到对路由的全覆盖,也不会返回/">www.xxx.com，因此对于后端来说，即使没有做到对路由的全覆盖，也不会返回</a> 404 错误。</p>
-</blockquote>
-<p>window 对象中有一个事件是 onhashchange，以下几种情况都会触发这个事件：</p>
-<p>直接更改浏览器地址，在最后面增加或改变#hash；<br>通过改变location.href或location.hash的值；<br>通过触发点击带锚点的链接；<br>浏览器前进后退可能导致hash的变化，前提是两个网页地址中的hash值不同。</p>
-<h3 id="2-Hash实现spa前端路由代码"><a href="#2-Hash实现spa前端路由代码" class="headerlink" title="2.Hash实现spa前端路由代码"></a>2.Hash实现spa前端路由代码</h3><h1 id="vue路由的钩子函数"><a href="#vue路由的钩子函数" class="headerlink" title="vue路由的钩子函数"></a>vue路由的钩子函数</h1><p>首页可以控制导航跳转，beforeEach，afterEach等，一般用于页面title的修改。一些需要登录才能调整页面的重定向功能。</p>
-<ul>
-<li>beforeEach主要有3个参数to，from，next：</li>
-<li>to：route即将进入的目标路由对象，</li>
-<li>from：route当前导航正要离开的路由</li>
-<li>next：function一定要调用该方法resolve这个钩子。执行效果依赖next方法的调用参数。可以控制网页的跳转。</li>
-</ul>
-
+          <p>通常 SPA 中前端路由有2种实现方式： window.history ，location.hash。下面就来介绍下这两种方式具体怎么实现的：一.history 1.history基本介绍 window.history 对象包含浏览器的历史，window.history 对象在编写时可不使用 window 这个前缀。history是实现SPA前端路由是一种主流方法，它有几个原始方法：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/24/vue%E7%9A%84%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
