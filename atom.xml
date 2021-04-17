@@ -160,6 +160,27 @@
   </entry>
   
   <entry>
+    <title>this的指向问题</title>
+    <link href="https://chengling0824.github.io/2021/03/24/JavaScript%E4%B9%8Bthis%E7%9A%84%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/"/>
+    <id>https://chengling0824.github.io/2021/03/24/JavaScript%E4%B9%8Bthis%E7%9A%84%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/</id>
+    <published>2021-03-24T04:08:02.000Z</published>
+    <updated>2021-04-12T03:32:29.906Z</updated>
+    
+    <content type="html"><![CDATA[<p>[toc]</p><h1 id="this的指向问题"><a href="#this的指向问题" class="headerlink" title="this的指向问题"></a>this的指向问题</h1><blockquote><p>this是一个对象，但是我们不同的操作 this指向的对象是不相同的。</p></blockquote><h2 id="三种-this指向情况："><a href="#三种-this指向情况：" class="headerlink" title="三种 this指向情况："></a>三种 this指向情况：</h2><ol><li><p>对象调用，this 指向该对象（前边谁调用 this 就指向谁）</p></li><li><p>直接调用的函数，this 指向的是全局 window 对象</p></li><li><p>通过 new 的方式，this 永远被绑定在新创建的对象上，任何方式都改变不了 this 的指向</p></li></ol><blockquote><p>new的过程，其实在内部创建了一个空对象，然后将构造函数传入的参数和属性挂在了这个空对象上，然后返回了这个对象。</p></blockquote><h2 id="扩展：箭头函数的-this-指向谁？"><a href="#扩展：箭头函数的-this-指向谁？" class="headerlink" title="扩展：箭头函数的 this 指向谁？"></a>扩展：箭头函数的 this 指向谁？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const obj &#x3D;&#123;</span><br><span class="line">    a:()&#x3D;&gt;&#123;</span><br><span class="line">        console.log(this)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>运行程序，控制台输出：</p></blockquote><p><img src="https://user-gold-cdn.xitu.io/2019/11/14/16e6758e10fbf72e?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p><blockquote><p>我们可以得出结论，this在箭头函数中失效了，因为这是由于箭头函数没有单独的 this值。</p><p>箭头函数的 this与声明所在的上下文相同。</p><p>也就是说调用箭头函数的时候，不会隐式的调用 this参数，而是从定义时的函数继承上下文。</p></blockquote><h1 id="如何改变-this-的值？"><a href="#如何改变-this-的值？" class="headerlink" title="如何改变 this 的值？"></a>如何改变 this 的值？</h1><ol><li><p>call 方法</p></li><li><p>apply 方法</p></li><li><p>bind 方法</p></li></ol>]]></content>
+    
+    
+    <summary type="html">this是一个对象，但是我们不同的操作 this指向的对象是不相同的。 三种 this指向情况： 1. 对象调用，this 指向该对象（前边谁调用 this 就指向谁） 2. 直接调用的函数，this 指向的是全局 window 对象 3. 通过 new 的方式，this 永远被绑定在新创建的对象上，任何方式都改变不了 this 的指向...</summary>
+    
+    
+    
+    <category term="javascript" scheme="https://chengling0824.github.io/categories/javascript/"/>
+    
+    
+    <category term="javascript" scheme="https://chengling0824.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>markdown常见指令</title>
     <link href="https://chengling0824.github.io/2021/03/24/markdown%E5%B8%B8%E8%A7%81%E6%8C%87%E4%BB%A4/"/>
     <id>https://chengling0824.github.io/2021/03/24/markdown%E5%B8%B8%E8%A7%81%E6%8C%87%E4%BB%A4/</id>
@@ -196,27 +217,6 @@
     
     
     <category term="vue" scheme="https://chengling0824.github.io/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>this的指向问题</title>
-    <link href="https://chengling0824.github.io/2021/03/24/JavaScript%E4%B9%8Bthis%E7%9A%84%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/"/>
-    <id>https://chengling0824.github.io/2021/03/24/JavaScript%E4%B9%8Bthis%E7%9A%84%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/</id>
-    <published>2021-03-24T04:08:02.000Z</published>
-    <updated>2021-04-12T03:32:29.906Z</updated>
-    
-    <content type="html"><![CDATA[<p>[toc]</p><h1 id="this的指向问题"><a href="#this的指向问题" class="headerlink" title="this的指向问题"></a>this的指向问题</h1><blockquote><p>this是一个对象，但是我们不同的操作 this指向的对象是不相同的。</p></blockquote><h2 id="三种-this指向情况："><a href="#三种-this指向情况：" class="headerlink" title="三种 this指向情况："></a>三种 this指向情况：</h2><ol><li><p>对象调用，this 指向该对象（前边谁调用 this 就指向谁）</p></li><li><p>直接调用的函数，this 指向的是全局 window 对象</p></li><li><p>通过 new 的方式，this 永远被绑定在新创建的对象上，任何方式都改变不了 this 的指向</p></li></ol><blockquote><p>new的过程，其实在内部创建了一个空对象，然后将构造函数传入的参数和属性挂在了这个空对象上，然后返回了这个对象。</p></blockquote><h2 id="扩展：箭头函数的-this-指向谁？"><a href="#扩展：箭头函数的-this-指向谁？" class="headerlink" title="扩展：箭头函数的 this 指向谁？"></a>扩展：箭头函数的 this 指向谁？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const obj &#x3D;&#123;</span><br><span class="line">    a:()&#x3D;&gt;&#123;</span><br><span class="line">        console.log(this)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>运行程序，控制台输出：</p></blockquote><p><img src="https://user-gold-cdn.xitu.io/2019/11/14/16e6758e10fbf72e?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p><blockquote><p>我们可以得出结论，this在箭头函数中失效了，因为这是由于箭头函数没有单独的 this值。</p><p>箭头函数的 this与声明所在的上下文相同。</p><p>也就是说调用箭头函数的时候，不会隐式的调用 this参数，而是从定义时的函数继承上下文。</p></blockquote><h1 id="如何改变-this-的值？"><a href="#如何改变-this-的值？" class="headerlink" title="如何改变 this 的值？"></a>如何改变 this 的值？</h1><ol><li><p>call 方法</p></li><li><p>apply 方法</p></li><li><p>bind 方法</p></li></ol>]]></content>
-    
-    
-    <summary type="html">this是一个对象，但是我们不同的操作 this指向的对象是不相同的。 三种 this指向情况： 1. 对象调用，this 指向该对象（前边谁调用 this 就指向谁） 2. 直接调用的函数，this 指向的是全局 window 对象 3. 通过 new 的方式，this 永远被绑定在新创建的对象上，任何方式都改变不了 this 的指向...</summary>
-    
-    
-    
-    <category term="javascript" scheme="https://chengling0824.github.io/categories/javascript/"/>
-    
-    
-    <category term="javascript" scheme="https://chengling0824.github.io/tags/javascript/"/>
     
   </entry>
   
