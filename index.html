@@ -332,7 +332,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://chengling0824.github.io/2021/04/01/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="https://chengling0824.github.io/2021/04/12/Vue-cli%E8%84%9A%E6%89%8B%E6%9E%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -346,7 +346,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/04/01/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">git基本操作</a>
+            <a href="/2021/04/12/Vue-cli%E8%84%9A%E6%89%8B%E6%9E%B6/" class="post-title-link" itemprop="url">Vue cli脚手架</a>
         </h2>
 
         <div class="post-meta">
@@ -355,16 +355,19 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-04-01 14:51:24" itemprop="dateCreated datePublished" datetime="2021-04-01T14:51:24+08:00">2021-04-01</time>
+              <time title="创建时间：2021-04-12 09:47:05 / 修改时间：11:35:22" itemprop="dateCreated datePublished" datetime="2021-04-12T09:47:05+08:00">2021-04-12</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-09 09:58:03" itemprop="dateModified" datetime="2021-04-09T09:58:03+08:00">2021-04-09</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                </span>
+            </span>
 
           
 
@@ -377,15 +380,69 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>git的基本操作逻辑 常用指令：1. 克隆版本库 git clone 2. 获取更新，查看其他人的进程 git feach 3. 取回更新，与本地合并 git pull 4. 推送本地代码到远程主机 git push</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/04/01/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>[toc]</p>
+<p><a target="_blank" rel="noopener" href="https://cli.vuejs.org/zh/">Vue CLI ：官方文档</a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>全局安装<code>npm install -g @vue/cli</code>, 一次安装永久使用</p>
+<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><p>一、使用 <code>vue ui</code> ,启动可视化面板创建项目</p>
+<p>二、基于交互式命令创建项目</p>
+<p><code>vue create hello-world</code>  (注意项目名不可以有大写)</p>
+<p>输入命令后，会跳出几个选项让你回答：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Please pick a present:</span><br><span class="line"><span class="keyword">default</span> <span class="comment">//可以选默认的包含了基本的 Babel + ESLint 设置的 preset</span></span><br><span class="line">Manually select features <span class="comment">//手动配置，根据你需要用方向键选择（按 “空格键”选择/取消选择，A键全选/取消全选）对应功能</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">? Check the features needed <span class="keyword">for</span> your project: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection)</span><br><span class="line">&gt;( ) Babel                           <span class="comment">//转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。                      </span></span><br><span class="line"> ( ) TypeScript<span class="comment">// TypeScript是一个JavaScript（后缀.js）的超集（后缀.ts）包含并扩展了 JavaScript 的语法，需要被编译输出为 JavaScript在浏览器运行，目前较少人再用</span></span><br><span class="line"> ( ) <span class="function">Progressive Web <span class="title">App</span> <span class="params">(PWA)</span> Support<span class="comment">// 渐进式Web应用程序</span></span></span><br><span class="line"><span class="function"> <span class="params">( )</span> Router                           <span class="comment">// vue-router（vue路由）</span></span></span><br><span class="line"><span class="function"> <span class="params">( )</span> Vuex                             <span class="comment">// vuex（vue的状态管理模式）</span></span></span><br><span class="line"> ( ) CSS Pre-processors               // CSS 预处理器（如：less、sass）</span><br><span class="line"> ( ) Linter / Formatter               <span class="comment">// 代码风格检查和格式化（如：ESlint）</span></span><br><span class="line"> ( ) Unit Testing                     <span class="comment">// 单元测试（unit tests）</span></span><br><span class="line"> ( ) E2E Testing                      <span class="comment">// e2e（end to end） 测试</span></span><br></pre></td></tr></table></figure>
+
+<p>选择完后直接enter，然后会提示你选择对应功能的具体工具包，选择自己擅长或者使用广泛的（方便遇到问题时百度）</p>
+<ul>
+<li>是否使用<strong>history router</strong>：</li>
+</ul>
+<p>history：利用了 HTML5 History Interface 中新增的 pushState( ) 和 replaceState( ) 方法（需要特定浏览器支持）。单页客户端应用，history mode 需要后台配置支持（详细参见：<a target="_blank" rel="noopener" href="https://router.vuejs.org/zh/guide/essentials/history-mode.html#%E5%90%8E%E7%AB%AF%E9%85%8D%E7%BD%AE%E4%BE%8B%E5%AD%90">https://router.vuejs.org/zh/guide/essentials/history-mode.html</a>）</p>
+<ul>
+<li><strong>css预处理器</strong></li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Check the features needed <span class="keyword">for</span> your project: Router, Vuex, CSS Pre-processors, Linter, Unit</span><br><span class="line"> Pick a CSS pre-<span class="built_in">processor</span> (PostCSS, Autoprefixer <span class="keyword">and</span> CSS Modules are supported by <span class="keyword">default</span>):</span><br><span class="line">&gt; SCSS/SASS  <span class="comment">//Sass安装需要Ruby环境，是在服务端处理的，SCSS 是 Sass3新语法（完全兼容 CSS3且继承Sass功能）</span></span><br><span class="line">  LESS       <span class="comment">//Less最终会通过编译处理输出css到浏览器，Less 既可以在客户端上运行，也可在服务端运行 (借助 Node.js)</span></span><br><span class="line">  Stylus     <span class="comment">//Stylus主要用来给Node项目进行CSS预处理支持，Stylus功能上更为强壮，和js联系更加紧密，可创建健壮的、动态的的CSS。</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>ESLint</strong>：提供一个插件化的javascript代码检测工具</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">? Pick a linter / formatter config: (Use arrow keys)</span><br><span class="line">&gt; ESLint with error prevention only </span><br><span class="line">ESLint + Airbnb config</span><br><span class="line">ESLint + Standard config</span><br><span class="line">ESLint + Prettier <span class="comment">//使用较多</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>何时检测</strong>：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">? Pick additional lint features: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection)</span><br><span class="line">&gt;( ) Lint on save                    <span class="comment">// 保存就检测</span></span><br><span class="line"> ( ) Lint <span class="keyword">and</span> fix on commit          <span class="comment">// fix和commit时候检查</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>单元测试</strong> ：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">? Pick a unit testing solution: (Use arrow keys)</span><br><span class="line">&gt; Mocha + Chai  <span class="comment">//mocha灵活,只提供简单的测试结构，如果需要其他功能需要添加其他库/插件完成。必须在全局环境中安装</span></span><br><span class="line">  Jest          <span class="comment">//安装配置简单，容易上手。内置Istanbul，可以查看到测试覆盖率，相较于Mocha:配置简洁、测试代码简洁、易于和babel集成、内置丰富的expect</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>如何存放配置</strong> ：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">? Where <span class="keyword">do</span> you prefer placing config <span class="keyword">for</span> Babel, PostCSS, ESLint, etc.? (Use arrow keys)</span><br><span class="line">&gt; In dedicated config files <span class="comment">// 独立文件放置</span></span><br><span class="line">  In package.json <span class="comment">// 放package.json里</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>是否保存本次配置</strong>（之后可以直接使用）：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">? Save <span class="keyword">this</span> as a preset <span class="keyword">for</span> future projects? (Y/n) <span class="comment">// y:记录本次配置，然后需要你起个名; n：不记录本次配置</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h1><p><code>npm run serve</code></p>
+<h1 id="vue-cli的webpack配置分析"><a href="#vue-cli的webpack配置分析" class="headerlink" title="vue-cli的webpack配置分析"></a>vue-cli的webpack配置分析</h1><ul>
+<li><p>从<code>package.json</code>可以看到开发和生产环境的入口。</p>
+<img src="https://upload-images.jianshu.io/upload_images/10868449-255932a94e033291.png" alt="img"  /></li>
+<li><p>可以看到dev中的设置，build/webpack.dev.conf.js，该文件是开发环境中webpack的配置入口。</p>
+</li>
+<li><p>在webpack.dev.conf.js中出现webpack.base.conf.js，这个文件是开发环境和生产环境，甚至测试环境，这些环境的公共webpack配置。可以说，这个文件相当重要。</p>
+</li>
+<li><p>还有config/index.js 、build/utils.js 、build/build.js等，具体请看这篇介绍：<br><a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=https://segmentfault.com/a/1190000008644830">https://segmentfault.com/a/1190000008644830</a></p>
+</li>
+</ul>
+<h1 id="打包上线"><a href="#打包上线" class="headerlink" title="打包上线"></a>打包上线</h1><p>注意，自己的项目文件都需要放到 src 文件夹下。<br>在项目开发完成之后，可以输入 <code>npm run build</code> 来进行打包工作。</p>
+<p>另：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="selector-class">.npm</span> 开启了npm run dev以后怎么退出或关闭？</span><br><span class="line">ctrl+c</span><br><span class="line"><span class="number">2</span><span class="selector-class">.--save-dev</span></span><br><span class="line">自动把模块和版本号添加到模块配置文件package<span class="selector-class">.json</span>中的依赖里devdependencies部分</span><br><span class="line"><span class="number">3</span>. --save-dev 与 --save 的区别</span><br><span class="line">--save     安装包信息将加入到dependencies（生产阶段的依赖）</span><br><span class="line">--save-dev 安装包信息将加入到devDependencies（开发阶段的依赖），所以开发阶段一般使用它</span><br></pre></td></tr></table></figure>
+
+<p>打包完成后，会生成 dist 文件夹，如果已经修改了文件路径，可以直接打开本地文件查看。<br>项目上线时，只需要将 dist 文件夹放到服务器就行了。</p>
+
       
     </div>
 
@@ -435,7 +492,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-09 09:58:15" itemprop="dateModified" datetime="2021-04-09T09:58:15+08:00">2021-04-09</time>
+                <time title="修改时间：2021-04-12 11:33:05" itemprop="dateModified" datetime="2021-04-12T11:33:05+08:00">2021-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -462,6 +519,150 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/01/css%E6%B5%AE%E5%8A%A8/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://chengling0824.github.io/2021/04/01/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="程羚">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenry's sky">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/01/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">git基本操作</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-01 14:51:24" itemprop="dateCreated datePublished" datetime="2021-04-01T14:51:24+08:00">2021-04-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-12 11:32:49" itemprop="dateModified" datetime="2021-04-12T11:32:49+08:00">2021-04-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>git的基本操作逻辑 常用指令：1. 克隆版本库 git clone 2. 获取更新，查看其他人的进程 git feach 3. 取回更新，与本地合并 git pull 4. 推送本地代码到远程主机 git push</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/01/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://chengling0824.github.io/2021/04/01/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6%E7%9A%84%E6%AF%94%E8%BE%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="程羚">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenry's sky">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/01/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6%E7%9A%84%E6%AF%94%E8%BE%83/" class="post-title-link" itemprop="url">Angular,React,Vue三大框架的比较</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-01 14:51:24" itemprop="dateCreated datePublished" datetime="2021-04-01T14:51:24+08:00">2021-04-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-12 11:33:20" itemprop="dateModified" datetime="2021-04-12T11:33:20+08:00">2021-04-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>背景介绍：Angular是基于 TypeScript 的 Javascript 框架。它是三大框架里最早针对页面性能问题提出的优化探索，并在2010年由Google对外发布，react、vue后面相继出现。然而Angular由于最早开始，那时候移动端还没有兴起，一开始定位的Web端有些不适应后来的移动端趋势，导致后面有个大的版本迭代。Angular团队在保持**性能优化**的核心方案的同时，适应**移动端化、组件化**的大热潮流</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/01/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6%E7%9A%84%E6%AF%94%E8%BE%83/">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -566,78 +767,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://chengling0824.github.io/2021/04/01/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6%E7%9A%84%E6%AF%94%E8%BE%83/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="程羚">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chenry's sky">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/04/01/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6%E7%9A%84%E6%AF%94%E8%BE%83/" class="post-title-link" itemprop="url">Angular,React,Vue三大框架的比较</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-04-01 14:51:24" itemprop="dateCreated datePublished" datetime="2021-04-01T14:51:24+08:00">2021-04-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-09 10:05:58" itemprop="dateModified" datetime="2021-04-09T10:05:58+08:00">2021-04-09</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>背景介绍：Angular是基于 TypeScript 的 Javascript 框架。它是三大框架里最早针对页面性能问题提出的优化探索，并在2010年由Google对外发布，react、vue后面相继出现。然而Angular由于最早开始，那时候移动端还没有兴起，一开始定位的Web端有些不适应后来的移动端趋势，导致后面有个大的版本迭代。Angular团队在保持**性能优化**的核心方案的同时，适应**移动端化、组件化**的大热潮流</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/04/01/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6%E7%9A%84%E6%AF%94%E8%BE%83/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://chengling0824.github.io/2021/03/30/vue%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -652,7 +781,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/03/30/vue%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">vue基础</a>
+            <a href="/2021/03/30/vue%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">未命名</a>
         </h2>
 
         <div class="post-meta">
@@ -669,17 +798,8 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-09 09:57:16" itemprop="dateModified" datetime="2021-04-09T09:57:16+08:00">2021-04-09</time>
+                <time title="修改时间：2021-04-18 00:25:33" itemprop="dateModified" datetime="2021-04-18T00:25:33+08:00">2021-04-18</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
-                </span>
-            </span>
 
           
 
@@ -692,15 +812,139 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Vue (读音 /vjuː/，类似于view) 是一套用于构建用户界面的渐进式框架。 1 vue指令 指令带有前缀 v-，以表示它们是 Vue 提供的特殊 attribute。它们会在渲染的 DOM 上应用特殊的响应式行为</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/30/vue%E5%9F%BA%E7%A1%80/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>[TOC]</p>
+<blockquote>
+<p>Vue (读音 /vjuː/，类似于 <strong>view</strong>) 是一套用于构建用户界面的<strong>渐进式框架</strong>。</p>
+</blockquote>
+<h1 id="vue响应式系统"><a href="#vue响应式系统" class="headerlink" title="vue响应式系统"></a>vue响应式系统</h1><p>Vue为MVVM框架，MVVM是前端页面的分层开发思想，主要关注于 视图层 分离。也就是说：MVVM把前端的视图层，分为了三部分 Model, View,  ViewModel</p>
+<ul>
+<li>Model 是 页面中，需要用到的数据</li>
+<li>View 是页面中的HTML结构；</li>
+<li>ViewModel 是 一个 中间的调度者,提供了双向数据绑定的概念；</li>
+</ul>
+<p>当数据模型data变化时，页面视图会得到响应更新，其原理对data的getter/setter方法进行拦截（Object.defineProperty或者Proxy），利用发布订阅的设计模式，在getter方法中进行订阅，在setter方法中发布通知，让所有订阅者完成响应。</p>
+<p>在响应式系统中，Vue会为数据模型data的每一个属性新建一个订阅中心作为发布者，而监听器watch、计算属性computed、视图渲染template/render三个角色同时作为订阅者，对于监听器watch，会直接订阅观察监听的属性，对于计算属性computed和视图渲染template/render，如果内部执行获取了data的某个属性，就会执行该属性的getter方法，然后自动完成对该属性的订阅，当属性被修改时，就会执行该属性的setter方法，从而完成该属性的发布通知，通知所有订阅者进行更新。</p>
+<h1 id="vue指令"><a href="#vue指令" class="headerlink" title="vue指令"></a>vue指令</h1><blockquote>
+<p>指令带有前缀 v-，以表示它们是 Vue 提供的特殊 attribute。它们会在渲染的 DOM 上应用特殊的响应式行为。</p>
+</blockquote>
+<h2 id="v-clock-解决文字闪动的问题"><a href="#v-clock-解决文字闪动的问题" class="headerlink" title="v-clock 解决文字闪动的问题"></a>v-clock 解决文字闪动的问题</h2><h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><ol>
+<li>提供样式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[v-clock]&#123;</span><br><span class="line">    display:none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>在插值表达式所在的标签中添加v-clock指令<br>先通过样式隐藏内容，然后在内存中进行值的替换，替换好后显示最终的结果。（解决了文字闪动的问题）</li>
+</ol>
+<h2 id="文本插值与-v-text、v-html、v-pre"><a href="#文本插值与-v-text、v-html、v-pre" class="headerlink" title="文本插值与 v-text、v-html、v-pre"></a>文本插值与 v-text、v-html、v-pre</h2><p>v-text<br>v-html<br>v-pre : 显示原始信息，跳过编译过程</p>
+<h2 id="数据响应式与-v-once"><a href="#数据响应式与-v-once" class="headerlink" title="数据响应式与 v-once"></a>数据响应式与 v-once</h2><blockquote>
+<p>数据响应式：数据和 DOM 被建立某种关联，数据的变化导致页面内容的变化</p>
+</blockquote>
+<p>v-once：只编译一次，不具有响应式功能</p>
+<h2 id="属性绑定-v-bind-："><a href="#属性绑定-v-bind-：" class="headerlink" title="属性绑定 v-bind / ："></a>属性绑定 v-bind / ：</h2><h3 id="样式绑定"><a href="#样式绑定" class="headerlink" title="样式绑定"></a>样式绑定</h3><p><strong>对象语法</strong>：<code>v-bind:class(类名: data中属性，值为true就会添加该样式)&quot;</code></p>
+<p>v-bind:class={类名1:data中的属性1，类名2:data中的属性2}</p>
+<p><strong>数组语法</strong>：class类名放在<strong>data</strong>属性中当做值，然后将<strong>data</strong>中的值放在数组中渲染给元素<code> v-bind:class&quot;[data属性名1，data属性名2]&quot;</code></p>
+<p><strong>style绑定</strong>：<code>v-bind:style&#123;color颜色名: data中的属性名&#125;</code>或<code>v-bind:style=&quot;[data属性名1，data属性名2]&quot;</code></p>
+<h2 id="双向数据绑定-v-model"><a href="#双向数据绑定-v-model" class="headerlink" title="双向数据绑定 v-model"></a>双向数据绑定 v-model</h2><p>实现<strong>表单输入</strong>和应用状态之间的双向绑定</p>
+<p><code>v-model=&#39;msg&#39;</code>相当于<code>v-bind:value=&quot;msg&quot; v-on:input=&#39;msg=$event.target.value&#39;</code>,实时更新msg的值</p>
+<h2 id="事件监听-v-on"><a href="#事件监听-v-on" class="headerlink" title="事件监听 v-on / @"></a>事件监听 v-on / @</h2><p><code>@click=&#39;num++&#39;</code> （num在data中定义）</p>
+<p><code>@click=&#39;handle&#39;</code>或<code>@click=&#39;handle()&#39;</code>    （handle函数在methods中定义）</p>
+<blockquote>
+<p>在methods中，this是vue的实例对象</p>
+</blockquote>
+<h2 id="分支循环结构"><a href="#分支循环结构" class="headerlink" title="分支循环结构"></a>分支循环结构</h2><h3 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h3><p>v-if</p>
+<p>v-else</p>
+<p>v-else-if</p>
+<p>v-show</p>
+<h3 id="循环结构-v-for"><a href="#循环结构-v-for" class="headerlink" title="循环结构 v-for"></a>循环结构 v-for</h3><p>v-for遍历数组：<code>v-for=&quot;(item, index) in list :key=&quot;item.id&quot;&quot;</code></p>
+<p>v-for遍历对象：<code> v-for (属性值v, 属性名k，索引 i )in 遍历的对象</code></p>
+<h2 id="时间修饰符"><a href="#时间修饰符" class="headerlink" title="时间修饰符"></a>时间修饰符</h2><h3 id="stop-阻止冒泡"><a href="#stop-阻止冒泡" class="headerlink" title=".stop 阻止冒泡"></a>.stop 阻止冒泡</h3><p>调用<code>event.stopPropagation( )</code></p>
+<h3 id="prevent-阻止默认行为"><a href="#prevent-阻止默认行为" class="headerlink" title=".prevent 阻止默认行为"></a>.prevent 阻止默认行为</h3><p>调用<code>event.preventDefault( )</code></p>
+<p><code> v-on:click.prevent.self</code> 阻止所有点击</p>
+<p><code>v-on:click.self.prevent</code> 阻止自身的点击</p>
+<h3 id="others"><a href="#others" class="headerlink" title="others"></a>others</h3><p>.capture 添加事件侦听器时使用capture模式</p>
+<p>.self 事件从侦听器绑定元素本身触发时才触发回调</p>
+<p>.once 只触发一次</p>
+<p>.passive</p>
+<h2 id="按键修饰符-keyup"><a href="#按键修饰符-keyup" class="headerlink" title="按键修饰符 .keyup"></a>按键修饰符 .keyup</h2><blockquote>
+<p>在监听键盘事件时，我们需要检查详细的按键。Vue允许为<code>v-on</code>在监听键盘时添加按键修饰符：</p>
+</blockquote>
+<h3 id="按键码"><a href="#按键码" class="headerlink" title="按键码"></a>按键码</h3><p><code>.enter</code>，<code>.tab</code>，<code>.delete</code>(捕获‘删除’键和‘退格’键)，<code>.esc</code></p>
+<p><code>.up</code>，<code>.down</code>，<code>.left</code>，<code>.right</code></p>
+<h3 id="自定义按键修饰符"><a href="#自定义按键修饰符" class="headerlink" title="自定义按键修饰符"></a>自定义按键修饰符</h3><p>可以通过<code>config.keyCodes</code>对象自定义<strong>按键修饰符别名</strong>，如<code>Vue.config.keyCodes.f1 = 11</code></p>
+<h1 id="自定义指令、计算、侦听、过滤器、生命周期"><a href="#自定义指令、计算、侦听、过滤器、生命周期" class="headerlink" title="自定义指令、计算、侦听、过滤器、生命周期"></a>自定义指令、计算、侦听、过滤器、生命周期</h1><h2 id="基于vue的表单操作"><a href="#基于vue的表单操作" class="headerlink" title="基于vue的表单操作"></a>基于vue的表单操作</h2><h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><p>input 单行文本</p>
+<p>textarea 多行文本</p>
+<p>select 下拉多选</p>
+<p>type=”radio” 单选框</p>
+<p>type=”checkbox” 多选框</p>
+<blockquote>
+<p>表单元素被选中的规则： </p>
+<p>1：通过v-model绑定data中的属性，该属性中的值就是表单对象中要显示的内容。 </p>
+<p> 2：data中属性可以是单个值，多个值则放在数组中，每一项用’ ‘引号包裹，逗号隔开。  </p>
+<p>3：多选框规律：因为v-model绑定了data中的属性，该元素中的value=1值，对应的就是data属性数组中的值，有几个多选框就会显示几个。</p>
+</blockquote>
+<h3 id="表单域修饰符"><a href="#表单域修饰符" class="headerlink" title="表单域修饰符"></a>表单域修饰符</h3><p>v-model.number：转化为数值，方便运算</p>
+<p>v-model.trim：去掉开始和结尾的空格</p>
+<p>v-model.lazy：将input事件转化为change事件（失去焦点时触发）</p>
+<h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><h3 id="全局定义自定义指令"><a href="#全局定义自定义指令" class="headerlink" title="全局定义自定义指令"></a>全局定义自定义指令</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//自定义指令的语法规则</span></span><br><span class="line">Vue.directive(<span class="string">&#x27;focus&#x27;</span>&#123;</span><br><span class="line">	inserted:<span class="function"><span class="keyword">function</span>(<span class="params">el</span>)</span>&#123;</span><br><span class="line">		<span class="comment">//获取元素的焦点</span></span><br><span class="line">		el.focus();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;自定义指令用法</span><br><span class="line">&lt;input type&#x3D;&quot;text&quot; v-focus&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//带参数的自定义指令</span></span><br><span class="line">Vue.directive(<span class="string">&#x27;color&#x27;</span>&#123;</span><br><span class="line">    <span class="comment">//bind：绑定事件函数</span></span><br><span class="line">	bind:<span class="function"><span class="keyword">function</span>(<span class="params">el,binding</span>)</span>&#123;</span><br><span class="line">		el.style.backgroundColor = binding.value.color;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;带参数的自定义指令的用法</span><br><span class="line">&lt;input type&#x3D;&quot;text&quot; v-color&#x3D;&#39;&#123;color:&quot;orange&quot;&#125;&#39;&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义局部指令"><a href="#自定义局部指令" class="headerlink" title="自定义局部指令"></a>自定义局部指令</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el:<span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    data:&#123;&#125;,</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="comment">//通过directive创建的指令为局部指令，Vue.directive为全局指令</span></span><br><span class="line">    directives:&#123;</span><br><span class="line">        focus:</span><br><span class="line">        	inserted:<span class="function"><span class="keyword">function</span>(<span class="params">el</span>)</span>&#123;</span><br><span class="line">    			el.focus();</span><br><span class="line">			&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h2><blockquote>
+<p>计算属性可以使模板内容更加简洁，更易维护</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;example&quot;&gt;</span><br><span class="line">  &lt;p&gt;Original message: &quot;&#123;&#123; message &#125;&#125;&quot;&lt;&#x2F;p&gt;</span><br><span class="line">  &lt;p&gt;Computed reversed message: &quot;&#123;&#123; reversedMessage &#125;&#125;&quot;&lt;&#x2F;p&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#example&#x27;</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: <span class="string">&#x27;Hello&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    <span class="comment">// 计算属性的 getter（vm.reversedMessage）</span></span><br><span class="line">    reversedMessage: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// `this` 指向 vm 实例</span></span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">this</span>.message.split(<span class="string">&#x27;&#x27;</span>).reverse().join(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>对于格式逻辑复杂的函数，使用计算属性能使内容更加简洁。compuetd计算属性名，对应{ }对象，对象中的属性名对应了处理函数<strong>function</strong>,  该函数的处理结果能返回给计算属性。</p>
+<h3 id="计算属性与方法的区别"><a href="#计算属性与方法的区别" class="headerlink" title="计算属性与方法的区别"></a>计算属性与方法的区别</h3><p>计算属性基于依赖进行缓存（如果值不变，则直接从缓存中拿结果，不进行二次调用），效率高，性能好</p>
+<p>方法不缓存（用一次调一次），性能开销较大</p>
+<h3 id="计算属性的setter"><a href="#计算属性的setter" class="headerlink" title="计算属性的setter"></a>计算属性的setter</h3><p>计算属性默认只有 getter，不过在需要时你也可以提供一个 setter：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">computed: &#123;</span><br><span class="line">  fullName: &#123;</span><br><span class="line">    <span class="comment">// getter</span></span><br><span class="line">    get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">this</span>.firstName + <span class="string">&#x27; &#x27;</span> + <span class="built_in">this</span>.lastName</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// setter</span></span><br><span class="line">    set: <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> names = newValue.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">      <span class="built_in">this</span>.firstName = names[<span class="number">0</span>]</span><br><span class="line">      <span class="built_in">this</span>.lastName = names[names.length - <span class="number">1</span>]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>现在再运行 <code>vm.fullName = &#39;John Doe&#39;</code> 时，setter 会被调用，<code>vm.firstName</code> 和 <code>vm.lastName</code> 也会相应地被更新。</p>
+<h2 id="侦听器-watch"><a href="#侦听器-watch" class="headerlink" title="侦听器 watch"></a>侦听器 watch</h2><blockquote>
+<p>虽然计算属性在大多数情况下更合适，但有时也需要一个自定义的侦听器。这就是为什么 Vue 通过 <code>watch</code> 选项提供了一个更通用的方法，来响应数据的变化。<strong>当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。</strong></p>
+</blockquote>
+<p>侦听属性watch一般用于异步或者开销较大的操作，比如通过ajax接口拿数据，和settimeout异步任务</p>
+<p><img src="vue%E5%9F%BA%E7%A1%80.assets/6fea0cd84379485dbe3854482e160aab~tplv-k3u1fbpfcp-watermark.image" alt="img"></p>
+<h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><blockquote>
+<p>Vue.js 允许你自定义过滤器，可被用于一些常见的文本格式化。过滤器可以用在两个地方：<strong>双花括号插值和 <code>v-bind</code> 表达式</strong> (后者从 2.1.0+ 开始支持)。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;过滤器的使用</span><br><span class="line">&lt;!-- 在双花括号中 --&gt;</span><br><span class="line">&#123;&#123; message | capitalize &#125;&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- 在 &#96;v-bind&#96; 中 --&gt;</span><br><span class="line">&lt;div v-bind:id&#x3D;&quot;rawId | formatId&quot;&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义过滤器（全局）"><a href="#自定义过滤器（全局）" class="headerlink" title="自定义过滤器（全局）"></a>自定义过滤器（全局）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vue.filter(<span class="string">&#x27;过滤器名称&#x27;</span>，<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">	<span class="comment">//过滤器业务逻辑</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="局部过滤器"><a href="#局部过滤器" class="headerlink" title="局部过滤器"></a>局部过滤器</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el:<span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    filter:&#123;</span><br><span class="line">        过滤器名称:<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="vue生命周期"><a href="#vue生命周期" class="headerlink" title="vue生命周期"></a>vue生命周期</h2><blockquote>
+<p>Vue 实例从创建到销毁的过程，就是生命周期。从开始创建、初始化数据、编译模板、挂载Dom→渲染、更新→渲染、销毁等一系列过程，称之为 Vue 的生命周期。</p>
+</blockquote>
+<p>实例的生命周期-分为3个大阶段 </p>
+<p>阶段一渲染： </p>
+<p>阶段二数据改动，更新数据：</p>
+<p>阶段三：销毁vue实例会触发， 该阶段中，我们主要记住mounted函数，以为页面数据已经渲染完成，我们之后会常用它调用ajax接口去渲染页面数据。</p>
+<ul>
+<li><strong>beforeCreate（创建前)</strong><br>在数据观测和初始化事件还未开始</li>
+<li><strong>created（创建后）</strong><br>完成数据观测，属性和方法的运算，初始化事件，el 替换，并挂载到实例上去之后调用。实例已完成以下的配置：用上面编译好的html内容替换el属性指向的DOM对象。完成模板中的html渲染到html页面中。此过程中进行ajax交互。</li>
+<li><strong>beforeMount(挂载前)</strong></li>
+<li><strong>mount*********</strong>&lt;。)#)))≦-/<em>ed(挂载后)</em>*<br>DOM 渲染在 mounted 中就已经完成。</li>
+<li><strong>beforeUpdate（更新前）</strong><br>在数据更新之前调用，发生在虚拟DOM重新渲染和打补丁之前。可以在该钩子中进一步地更改状态，不会触发附加的重渲染过程。</li>
+<li><strong>updated（更新后）</strong><br>在由于数据更改导致的虚拟DOM重新渲染和打补丁之后调用。调用时，组件DOM已经更新，所以可以执行依赖于DOM的操作。然而在大多数情况下，应该避免在此期间更改状态，因为这可能会导致更新无限循环。该钩子在服务器端渲染期间不被调用。</li>
+<li><strong>beforeDestroy（销毁前）</strong><br>在实例销毁之前调用。实例仍然完全可用。</li>
+<li><strong>destroyed（销毁后）</strong><br>在实例销毁之后调用。调用后，所有的事件监听器会被移除，所有的子实例也会被销毁。该钩子在服务器端渲染期间不被调用。</li>
+</ul>
+<p>同时在这个过程中也会运行一些叫做生命周期钩子的函数，给予用户机会在一些特定的场景下添加他们自己的代码,让我们在控制整个Vue实例的过程时更容易形成好的逻辑。</p>
+<img src="https://img2018.cnblogs.com/blog/1344042/201909/1344042-20190911140831736-1797567922.png" style="zoom: 50%;" />
+
+<h1 id="vue组件"><a href="#vue组件" class="headerlink" title="vue组件"></a>vue组件</h1><blockquote>
+<p>组件系统是 Vue 的另一个重要概念，因为它是一种抽象，允许我们使用小型、独立和通常可复用的组件构建大型应用。仔细想想，几乎任意类型的应用界面都可以抽象为一个组件树</p>
+</blockquote>
+<h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1><h1 id="数据请求：Fetch-API"><a href="#数据请求：Fetch-API" class="headerlink" title="数据请求：Fetch API"></a>数据请求：Fetch API</h1>
       
     </div>
 
@@ -750,7 +994,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-09 09:57:40" itemprop="dateModified" datetime="2021-04-09T09:57:40+08:00">2021-04-09</time>
+                <time title="修改时间：2021-04-12 11:32:29" itemprop="dateModified" datetime="2021-04-12T11:32:29+08:00">2021-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -868,87 +1112,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://chengling0824.github.io/2021/03/24/vue%E7%9A%84%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="程羚">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chenry's sky">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/24/vue%E7%9A%84%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">vue路由的实现与钩子函数</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-24 12:08:02" itemprop="dateCreated datePublished" datetime="2021-03-24T12:08:02+08:00">2021-03-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-09 10:08:09" itemprop="dateModified" datetime="2021-04-09T10:08:09+08:00">2021-04-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>通常 SPA 中前端路由有2种实现方式： window.history ，location.hash。下面就来介绍下这两种方式具体怎么实现的：一.history 1.history基本介绍 window.history 对象包含浏览器的历史，window.history 对象在编写时可不使用 window 这个前缀。history是实现SPA前端路由是一种主流方法，它有几个原始方法：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/24/vue%E7%9A%84%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1020,7 +1183,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
