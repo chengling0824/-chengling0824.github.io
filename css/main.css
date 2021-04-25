@@ -1201,7 +1201,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #b69e9d;
+  background: #85fff6;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1350,7 +1350,7 @@ pre .javascript .function {
   text-overflow: ellipsis;
 }
 .post-toc .nav .nav-child {
-  display: block;
+  display: none;
 }
 .post-toc .nav .active > .nav-child {
   display: block;
